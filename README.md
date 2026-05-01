@@ -89,13 +89,29 @@ curl https://api.openai.com/v1/chat/completions \
 
 We've included `graphify` directly in this repository. Graphify automatically maps out your codebase (AST), linking files, objects, functions, and their dependencies. This is perfect for feeding exact project context to the AI prompts above!
 
-### Usage Command
+### Setup & Installation (Support for JS/TS/Python etc.)
+Graphify is a Python-based tool that uses `tree-sitter` to parse your project's code. You need to install the dependencies and the specific language parsers (like JavaScript) before running it:
+
 ```bash
 # Navigate to the tool's folder
 cd "graphify"
 
-# Run Graphify against a target directory (e.g. your application's codebase)
-python -m graphify ../my-web-app
+# 1. Create a virtual environment and activate it
+python3 -m venv venv
+source venv/bin/activate
+
+# 2. Install base dependencies
+pip install networkx pygments jinja2 typing_extensions anthropic litellm
+
+# 3. Install Tree-Sitter and Language Parsers (e.g., for JS and TS)
+pip install tree-sitter tree-sitter-javascript tree-sitter-typescript tree-sitter-python
+```
+
+### Usage Command
+Once installed, you can easily run graphify against any target directory (like a React or Node.js project):
+```bash
+# Run Graphify against a target directory
+python3 -m graphify ../my-js-app
 ```
 Graphify will output a local `graphify-out/GRAPH_REPORT.md` detecting your clusters and core files. Feed this output directly to your AI alongside an Awesome System Prompt for legendary precision.
 
