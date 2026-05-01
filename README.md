@@ -24,7 +24,7 @@ Explore the folders to learn how different AI applications structure their syste
 
 If you just want to see how these prompts work, you don't need any coding skills! Just follow these steps:
 
-1. **Pick a tool you like:** Navigate into any folder (for example, `Cursor Prompts`).
+1. **Pick a tool you like:** Navigate into any folder inside the `prompts/` directory (for example, `prompts/Cursor Prompts`).
 2. **Open the prompt file:** Click on the `Chat Prompt.txt` or `Agent Prompt.txt` file.
 3. **Copy the text:** Select all the text inside the file and copy it to your clipboard.
 4. **Paste it into your favorite AI:**
@@ -47,7 +47,7 @@ You can directly read a `Prompt.txt` file and insert it into the `system` role o
 export OPENAI_API_KEY="your-api-key"
 
 # Read the prompt into a variable, then call the API
-SYSTEM_PROMPT=$(cat "Cursor Prompts/Chat Prompt.txt")
+SYSTEM_PROMPT=$(cat "prompts/Cursor Prompts/Chat Prompt.txt")
 
 curl https://api.openai.com/v1/chat/completions \
   -H "Content-Type: application/json" \
@@ -72,11 +72,11 @@ If you use CLI tools like [fabric](https://github.com/danielmiessler/fabric) or 
 
 ```bash
 # Using aichat to run a prompt as context
-cat "Devin AI/Prompt.txt" | aichat "Write a Python script to scrape a website."
+cat "prompts/Devin AI/Prompt.txt" | aichat "Write a Python script to scrape a website."
 ```
 
 ### Method 3: Simple Copy-Paste
-You can simply open any `Prompt.txt` file (e.g., `Anthropic/Claude Sonnet 4.6.txt`), copy all of its text, and paste it into the "System Instructions" or "Custom Instructions" section of ChatGPT, Claude web interfaces, or your favorite AI playground (like OpenAI Playground or Google AI Studio).
+You can simply open any `Prompt.txt` file (e.g., `prompts/Anthropic/Claude Sonnet 4.6.txt`), copy all of its text, and paste it into the "System Instructions" or "Custom Instructions" section of ChatGPT, Claude web interfaces, or your favorite AI playground (like OpenAI Playground or Google AI Studio).
 
 ## 🤝 Contributing
 
