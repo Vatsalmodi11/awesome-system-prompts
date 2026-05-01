@@ -20,10 +20,27 @@ Explore the folders to learn how different AI applications structure their syste
 
 ## 🛠️ How to Use These Prompts
 
-You can use these system prompts with any API (like OpenAI, Anthropic, Gemini, etc.) or local inference tool (like Ollama) to replicate the behavior of these AI assistants.
+### 🟢 The Easiest Way (No Coding Required)
 
-### Method 1: API (Using cURL or Scripts)
-You can directly pass the contents of a `Prompt.txt` file into the `system` role of an API request. Here's an example using OpenAI's API:
+If you just want to see how these prompts work, you don't need any coding skills! Just follow these steps:
+
+1. **Pick a tool you like:** Navigate into any folder (for example, `Cursor Prompts`).
+2. **Open the prompt file:** Click on the `Chat Prompt.txt` or `Agent Prompt.txt` file.
+3. **Copy the text:** Select all the text inside the file and copy it to your clipboard.
+4. **Paste it into your favorite AI:**
+   - Go to **ChatGPT** (under "Custom Instructions"), **Claude** (under "Projects" or "System Instructions"), or any AI Playground (like **Google AI Studio**).
+   - Paste the copied text into the "System Prompt" or "Instructions" box and save.
+
+That's it! When you start chatting, the AI will now act like the tool you copied the prompt from.
+
+---
+
+### 💻 For Developers (Using APIs or Custom Scripts)
+
+You can programmatically use these system prompts with any API (like OpenAI, Anthropic, Gemini) or local inference tool (like Ollama).
+
+#### Using an API (cURL Example)
+You can directly read a `Prompt.txt` file and insert it into the `system` role of an API request:
 
 ```bash
 # Set your API key
