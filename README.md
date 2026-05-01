@@ -1,4 +1,4 @@
-# All AI Prompt File (System Prompts and Models)
+# Awesome System Prompts
 
 A comprehensive collection of system prompts, custom instructions, and tool configurations utilized by various state-of-the-art AI assistants and agents. 
 
