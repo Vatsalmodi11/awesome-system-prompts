@@ -86,17 +86,17 @@ Contributions are welcome! If you've discovered or extracted a system prompt for
 
 ## 🕸️ Using Graphify (AST-based knowledge graph for code)
 
-Graphify is a tool included in the `Graphify Agent` folder to map out your codebase structure (AST) automatically! It creates a graph of files, objects, functions, and their dependencies to help agents or you quickly navigate large AI prompt repositories or software projects.
+Graphify is a tool included in the `graphify` folder to map out your codebase structure (AST) automatically! It creates a graph of files, objects, functions, and their dependencies to help agents or you quickly navigate large AI prompt repositories or software projects.
 
 ### 🛠️ Usage Command:
 To run graphify to analyze a repository or a specific folder, you simply use the Python CLI module inside it.
 
 ```bash
 # Navigate to the tool's folder
-cd "Graphify Agent"
+cd "graphify"
 
 # Run Graphify against a target directory (e.g. your prompt folders)
-python -m graphify ../Anthropic
+python -m graphify ../prompts/Anthropic
 ```
 
 Graphify will parse the files, build a structured map, and output a local knowledge graph directory called `graphify-out/`.
