@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://graphifylabs.ai"><img src="https://raw.githubusercontent.com/safishamsi/graphify/v4/docs/logo-text.svg" width="260" height="64" alt="Graphify"/></a>
+  <a href="https://graphifylabs.ai"><img src="https://raw.githubusercontent.com/Vatsalmodi11/graphify/v4/docs/logo-text.svg" width="260" height="64" alt="Graphify"/></a>
 </p>
 
 <p align="center">
@@ -7,17 +7,17 @@
 </p>
 
 <p align="center">
-  <a href="https://safishamsi.gumroad.com/l/qetvlo"><img src="https://img.shields.io/badge/Book-The%20Memory%20Layer-2ea44f?style=flat&logo=gitbook&logoColor=white" alt="The Memory Layer"/></a>
-  <a href="https://github.com/safishamsi/graphify/actions/workflows/ci.yml"><img src="https://github.com/safishamsi/graphify/actions/workflows/ci.yml/badge.svg?branch=v4" alt="CI"/></a>
+  <a href="https://Vatsalmodi11.gumroad.com/l/qetvlo"><img src="https://img.shields.io/badge/Book-The%20Memory%20Layer-2ea44f?style=flat&logo=gitbook&logoColor=white" alt="The Memory Layer"/></a>
+  <a href="https://github.com/Vatsalmodi11/graphify/actions/workflows/ci.yml"><img src="https://github.com/Vatsalmodi11/graphify/actions/workflows/ci.yml/badge.svg?branch=v4" alt="CI"/></a>
   <a href="https://pypi.org/project/graphifyy/"><img src="https://img.shields.io/pypi/v/graphifyy" alt="PyPI"/></a>
   <a href="https://pepy.tech/project/graphifyy"><img src="https://static.pepy.tech/badge/graphifyy" alt="Downloads"/></a>
-  <a href="https://github.com/sponsors/safishamsi"><img src="https://img.shields.io/badge/sponsor-safishamsi-ea4aaa?logo=github-sponsors" alt="Sponsor"/></a>
+  <a href="https://github.com/sponsors/Vatsalmodi11"><img src="https://img.shields.io/badge/sponsor-Vatsalmodi11-ea4aaa?logo=github-sponsors" alt="Sponsor"/></a>
   <a href="https://www.linkedin.com/in/safi-shamsi"><img src="https://img.shields.io/badge/LinkedIn-Safi%20Shamsi-0077B5?logo=linkedin" alt="LinkedIn"/></a>
 </p>
 
 <p align="center">
-  <a href="https://star-history.com/#safishamsi/graphify&Date">
-    <img src="https://api.star-history.com/svg?repos=safishamsi/graphify&type=Date" alt="Star History Chart" width="600"/>
+  <a href="https://star-history.com/#Vatsalmodi11/graphify&Date">
+    <img src="https://api.star-history.com/svg?repos=Vatsalmodi11/graphify&type=Date" alt="Star History Chart" width="600"/>
   </a>
 </p>
 
@@ -72,7 +72,7 @@ pipx install graphifyy && graphify install
 pip install graphifyy && graphify install
 ```
 
-> **Official package:** The PyPI package is named `graphifyy` (install with `pip install graphifyy`). Other packages named `graphify*` on PyPI are not affiliated with this project. The only official repository is [safishamsi/graphify](https://github.com/safishamsi/graphify). The CLI and skill command are still `graphify`.
+> **Official package:** The PyPI package is named `graphifyy` (install with `pip install graphifyy`). Other packages named `graphify*` on PyPI are not affiliated with this project. The only official repository is [Vatsalmodi11/graphify](https://github.com/Vatsalmodi11/graphify). The CLI and skill command are still `graphify`.
 
 > **`graphify: command not found`?** Use `uv tool install graphifyy` (recommended) or `pipx install graphifyy` — both put the CLI in a managed location that's automatically on PATH. With plain `pip`, you may need to add `~/.local/bin` (Linux) or `~/Library/Python/3.x/bin` (Mac) to your PATH, or run `python -m graphify` instead. On Windows, pip scripts land in `%APPDATA%\Python\PythonXY\Scripts`.
 
@@ -245,7 +245,7 @@ That gives the assistant structured graph access for repeated queries such as
 
 ```bash
 mkdir -p ~/.claude/skills/graphify
-curl -fsSL https://raw.githubusercontent.com/safishamsi/graphify/v4/graphify/skill.md \
+curl -fsSL https://raw.githubusercontent.com/Vatsalmodi11/graphify/v4/graphify/skill.md \
   > ~/.claude/skills/graphify/SKILL.md
 ```
 
@@ -432,7 +432,7 @@ NetworkX + Leiden (graspologic) + tree-sitter + vis.js. Semantic extraction via 
 
 ## Built on graphify — Penpax
 
-[**Penpax**](https://safishamsi.github.io/penpax.ai) is the enterprise layer on top of graphify. Where graphify turns a folder of files into a knowledge graph, Penpax applies the same graph to your entire working life — continuously.
+[**Penpax**](https://Vatsalmodi11.github.io/penpax.ai) is the enterprise layer on top of graphify. Where graphify turns a folder of files into a knowledge graph, Penpax applies the same graph to your entire working life — continuously.
 
 | | graphify | Penpax |
 |---|---|---|
@@ -444,11 +444,11 @@ NetworkX + Leiden (graspologic) + tree-sitter + vis.js. Semantic extraction via 
 
 Built for lawyers, consultants, executives, doctors, researchers — anyone whose work lives across hundreds of conversations and documents they can never fully reconstruct.
 
-**Free trial launching soon.** [Join the waitlist →](https://safishamsi.github.io/penpax.ai)
+**Free trial launching soon.** [Join the waitlist →](https://Vatsalmodi11.github.io/penpax.ai)
 
 ## What we are building next
 
-graphify is the graph layer. Penpax is the always-on layer on top of it — an on-device digital twin that connects your meetings, browser history, files, emails, and code into one continuously updating knowledge graph. No cloud, no training on your data. [Join the waitlist.](https://safishamsi.github.io/penpax.ai)
+graphify is the graph layer. Penpax is the always-on layer on top of it — an on-device digital twin that connects your meetings, browser history, files, emails, and code into one continuously updating knowledge graph. No cloud, no training on your data. [Join the waitlist.](https://Vatsalmodi11.github.io/penpax.ai)
 
 <details>
 <summary>Contributing</summary>
