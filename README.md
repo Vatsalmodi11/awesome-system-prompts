@@ -81,3 +81,46 @@ You can simply open any `Prompt.txt` file (e.g., `Anthropic/Claude Sonnet 4.6.tx
 ## 🤝 Contributing
 
 Contributions are welcome! If you've discovered or extracted a system prompt for a new tool, structure it in its respective folder and submit a pull request.
+
+---
+
+## 🕸️ Using Graphify (AST-based knowledge graph for code)
+
+Graphify is a tool included in the `Graphify Agent` folder to map out your codebase structure (AST) automatically! It creates a graph of files, objects, functions, and their dependencies to help agents or you quickly navigate large AI prompt repositories or software projects.
+
+### 🛠️ Usage Command:
+To run graphify to analyze a repository or a specific folder, you simply use the Python CLI module inside it.
+
+```bash
+# Navigate to the tool's folder
+cd "Graphify Agent"
+
+# Run Graphify against a target directory (e.g. your prompt folders)
+python -m graphify ../Anthropic
+```
+
+Graphify will parse the files, build a structured map, and output a local knowledge graph directory called `graphify-out/`.
+
+### 📊 What does the Graph look like?
+
+When graphify finishes, it creates an easily readable `GRAPH_REPORT.md` (and a JSON graph index) that looks like this abstract example:
+
+```markdown
+# Codebase Graph Report
+**Directory analyzed:** ../Anthropic
+
+### 👑 God Nodes (Highly Connected/Important Files)
+* `claude-sonnet-4.6.md` - Connected to 12 shared reasoning frameworks.
+* `claude-code.md` - Foundational prompt affecting 6 other tools.
+
+### 🏘️ Communities (Clusters of related Prompts)
+**Cluster 1: Claude Desktop**
+* `claude-desktop-code.md` -> references Desktop API limits
+* `claude-in-chrome.md` -> shares browser reading functions with Desktop
+
+**Cluster 2: Microsoft Office Integration**
+* `claude-for-word.md` -> uses Word-specific COM tool formats
+* `claude-for-excel.md` -> uses Data Analysis function formats
+```
+
+This visualization lets agents see which prompts share dependencies or common rules at a glance!
