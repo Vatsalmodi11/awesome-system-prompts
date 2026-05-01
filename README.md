@@ -1,52 +1,74 @@
-# Awesome System Prompts
+# 🌟 Awesome System Prompts
 
-A comprehensive collection of system prompts, custom instructions, and tool configurations utilized by various state-of-the-art AI assistants and agents. 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#-contributing)
 
-## 📂 Contents
-
-This repository includes prompts and tool specifications from prominent AI tools, organized by provider and application:
-
-- **Anthropic & Claude:** Claude Code, Claude for Chrome, Sonnet models
-- **Code Assistants & IDEs:** Cursor, Windsurf, Trae, CodeBuddy, VSCode Agent, Replit, Augment Code, Xcode
-- **Autonomous Agents & Search:** Devin AI, Manus Agent, Notion AI, Perplexity, Comet Assistant
-- **Open Source Prompts:** Bolt, Cline, Codex CLI, RooCode
-
-## 🚀 Purpose & Usage
-
-Explore the folders to learn how different AI applications structure their system prompts, agent loops, reasoning constraints, and tool definitions. 
-
-- **`Prompt.txt` / `.md` files**: The core system prompts instructing the AI's behavior and constraints.
-- **`.json` / `.yaml` files**: Typical function schemas, agent tool configurations, and API integrations.
-
-## 🛠️ How to Use These Prompts
-
-### 🟢 The Easiest Way (No Coding Required)
-
-If you just want to see how these prompts work, you don't need any coding skills! Just follow these steps:
-
-1. **Pick a tool you like:** Navigate into any folder inside the `prompts/` directory (for example, `prompts/Cursor Prompts`).
-2. **Open the prompt file:** Click on the `Chat Prompt.txt` or `Agent Prompt.txt` file.
-3. **Copy the text:** Select all the text inside the file and copy it to your clipboard.
-4. **Paste it into your favorite AI:**
-   - Go to **ChatGPT** (under "Custom Instructions"), **Claude** (under "Projects" or "System Instructions"), or any AI Playground (like **Google AI Studio**).
-   - Paste the copied text into the "System Prompt" or "Instructions" box and save.
-
-That's it! When you start chatting, the AI will now act like the tool you copied the prompt from.
+A meticulously curated collection of **System Prompts, Custom Instructions, and Tool Configurations** extracted from the world's most advanced AI assistants and autonomous agents. By studying or adopting these prompts, you can unlock better reasoning, stricter adherence to constraints, and more powerful AI behaviors in your own applications.
 
 ---
 
-### 💻 For Developers (Using APIs or Custom Scripts)
+## 🗂️ Prompt Directory
 
-You can programmatically use these system prompts with any API (like OpenAI, Anthropic, Gemini) or local inference tool (like Ollama).
+Explore our extensive vault of AI instructions, structured by their core application.
 
-#### Using an API (cURL Example)
-You can directly read a `Prompt.txt` file and insert it into the `system` role of an API request:
+| Category | Providers & Tools | Description |
+| :--- | :--- | :--- |
+| **🧠 Foundation Models** | <ul><li>[Anthropic](./prompts/Anthropic/)</li><li>[OpenAI](./prompts/OpenAI/)</li><li>[Google](./prompts/Google/)</li><li>[xAI](./prompts/xAI/)</li></ul> | Core system guidelines dictating the persona, safety rules, and deep reasoning loops of flagship models (e.g., Claude, GPT-4o, Gemini). |
+| **💻 Code Assistants** | <ul><li>[Cursor](./prompts/Cursor%20Prompts/)</li><li>[Windsurf](./prompts/Windsurf/)</li><li>[Trae](./prompts/Trae/)</li><li>[VSCode Agent](./prompts/VSCode%20Agent/)</li><li>[Xcode](./prompts/Xcode/)</li></ul> | IDE-integrated prompts engineered for precision coding, strict file-editing limits, and codebase exploration rules. |
+| **🕵️ Application Agents** | <ul><li>[Devin AI](./prompts/Devin%20AI/)</li><li>[Manus](./prompts/Manus%20Agent%20Tools%20&%20Prompt/)</li><li>[Perplexity](./prompts/Perplexity/)</li><li>[Notion AI](./prompts/NotionAi/)</li></ul> | Multi-step agent loops, browser searching constraints, and complex memory-management tool definitions. |
+| **🌐 Open Source** | <ul><li>[Cline](./prompts/Open%20Source%20prompts/Cline/)</li><li>[RooCode](./prompts/Open%20Source%20prompts/RooCode/)</li><li>[Bolt](./prompts/Open%20Source%20prompts/Bolt/)</li></ul> | Open-source ecosystem implementations of advanced coding loops and agent architectures. |
 
+---
+
+## 🎯 Pro-Tip: Supercharge Your Own Projects
+
+Want to get the absolute **best, most accurate results** when generating code? You can combine these world-class system prompts with your *existing* project context to significantly boost output quality.
+
+Instead of writing basic questions, use this **Context-Driven AI Formula**:
+
+### 1. The Strategy
+* **Adopt a Persona:** Copy an IDE prompt (like `prompts/Cursor Prompts/Agent Prompt.txt`). These prompts are heavily engineered to prevent bugs and enforce best practices.
+* **Provide Your Architecture:** Feed the AI your existing file structures so it understands your environment. *(Hint: Use the included **Graphify** tool below to generate a map of your codebase!)*
+
+### 2. Permanent Integration into your IDE
+You can indefinitely bind these expert coding rules to your project locally so the AI always writes perfectly matched code:
+- **For Cursor:** Create a `.cursorrules` file in your root folder and paste your favorite system prompt inside.
+- **For Windsurf / Claude Code:** Paste the prompt rules into a `.windsurfrules` or `CLAUDE.md` file.
+- **For GitHub Copilot:** Save the prompt into `.github/copilot-instructions.md`.
+
+### 3. The Perfect Mega-Prompt Structure
+If using a web chat (like ChatGPT or Claude.ai), structure your message like this:
+```text
+[SYSTEM RULES]
+<Paste a professional prompt from this repository here (e.g., Claude Sonnet 4.6.txt)>
+
+[MY PROJECT CONTEXT]
+<Paste your codebase file tree or your Graphify GRAPH_REPORT.md here>
+
+[MY TASK]
+Implement completely new Authentication middleware. Ensure you follow the exact modular format found in my existing project files!
+```
+**Result:** The AI adopts a senior-developer persona, perfectly respects your unique architecture, and writes seamless, highly accurate project-specific code!
+
+---
+
+## 🛠️ Simple Usage (No Coding Required)
+
+Just browsing? You don't need coding skills to use these! 
+1. Navigate into any folder (e.g., `prompts/OpenAI`).
+2. Open a `.txt` or `.md` file.
+3. Select and copy all the text.
+4. Paste it into the "System Instructions" or "Custom Instructions" box in ChatGPT, Claude, or Google AI Studio. 
+
+---
+
+## 💻 Developer API Usage
+
+You can programmatically inject these prompts into API requests (OpenAI, Anthropic, Gemini) or local inference tools (like Ollama).
+
+#### cURL Example
 ```bash
-# Set your API key
 export OPENAI_API_KEY="your-api-key"
-
-# Read the prompt into a variable, then call the API
 SYSTEM_PROMPT=$(cat "prompts/Cursor Prompts/Chat Prompt.txt")
 
 curl https://api.openai.com/v1/chat/completions \
@@ -55,72 +77,30 @@ curl https://api.openai.com/v1/chat/completions \
   -d '{
     "model": "gpt-4o",
     "messages": [
-      {
-        "role": "system",
-        "content": "'"${SYSTEM_PROMPT//\"/\\\"}"'"
-      },
-      {
-        "role": "user",
-        "content": "Hello, how can you help me?"
-      }
+      {"role": "system", "content": "'"${SYSTEM_PROMPT//\"/\\\"}"'"},
+      {"role": "user", "content": "Help me debug this."}
     ]
   }'
 ```
 
-### Method 2: AI CLI Tools
-If you use CLI tools like [fabric](https://github.com/danielmiessler/fabric) or [aichat](https://github.com/sigoden/aichat), you can pipe the prompt file contents into your command:
-
-```bash
-# Using aichat to run a prompt as context
-cat "prompts/Devin AI/Prompt.txt" | aichat "Write a Python script to scrape a website."
-```
-
-### Method 3: Simple Copy-Paste
-You can simply open any `Prompt.txt` file (e.g., `prompts/Anthropic/Claude Sonnet 4.6.txt`), copy all of its text, and paste it into the "System Instructions" or "Custom Instructions" section of ChatGPT, Claude web interfaces, or your favorite AI playground (like OpenAI Playground or Google AI Studio).
-
-## 🤝 Contributing
-
-Contributions are welcome! If you've discovered or extracted a system prompt for a new tool, structure it in its respective folder and submit a pull request.
-
 ---
 
-## 🕸️ Using Graphify (AST-based knowledge graph for code)
+## 🕸️ Using Graphify (AST Knowledge Graph)
 
-Graphify is a tool included in the `graphify` folder to map out your codebase structure (AST) automatically! It creates a graph of files, objects, functions, and their dependencies to help agents or you quickly navigate large AI prompt repositories or software projects.
+We've included `graphify` directly in this repository. Graphify automatically maps out your codebase (AST), linking files, objects, functions, and their dependencies. This is perfect for feeding exact project context to the AI prompts above!
 
-### 🛠️ Usage Command:
-To run graphify to analyze a repository or a specific folder, you simply use the Python CLI module inside it.
-
+### Usage Command
 ```bash
 # Navigate to the tool's folder
 cd "graphify"
 
-# Run Graphify against a target directory (e.g. your prompt folders)
-python -m graphify ../prompts/Anthropic
+# Run Graphify against a target directory (e.g. your application's codebase)
+python -m graphify ../my-web-app
 ```
+Graphify will output a local `graphify-out/GRAPH_REPORT.md` detecting your clusters and core files. Feed this output directly to your AI alongside an Awesome System Prompt for legendary precision.
 
-Graphify will parse the files, build a structured map, and output a local knowledge graph directory called `graphify-out/`.
+---
 
-### 📊 What does the Graph look like?
+## 🤝 Contributing
 
-When graphify finishes, it creates an easily readable `GRAPH_REPORT.md` (and a JSON graph index) that looks like this abstract example:
-
-```markdown
-# Codebase Graph Report
-**Directory analyzed:** ../Anthropic
-
-### 👑 God Nodes (Highly Connected/Important Files)
-* `claude-sonnet-4.6.md` - Connected to 12 shared reasoning frameworks.
-* `claude-code.md` - Foundational prompt affecting 6 other tools.
-
-### 🏘️ Communities (Clusters of related Prompts)
-**Cluster 1: Claude Desktop**
-* `claude-desktop-code.md` -> references Desktop API limits
-* `claude-in-chrome.md` -> shares browser reading functions with Desktop
-
-**Cluster 2: Microsoft Office Integration**
-* `claude-for-word.md` -> uses Word-specific COM tool formats
-* `claude-for-excel.md` -> uses Data Analysis function formats
-```
-
-This visualization lets agents see which prompts share dependencies or common rules at a glance!
+Contributions are heavily encouraged! If you've discovered, extracted, or leaked a system prompt for a new tool, structure it in its respective folder and submit a pull request.
