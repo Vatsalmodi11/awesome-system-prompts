@@ -115,7 +115,7 @@ python3 -m graphify ../my-js-app
 ```
 Graphify will output a local `graphify-out/GRAPH_REPORT.md` detecting your clusters and core files. Feed this output directly to your AI alongside an Awesome System Prompt for legendary precision.
 
----
+----
 
 ## 🤝 Contributing
 
