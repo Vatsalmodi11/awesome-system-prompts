@@ -60,9 +60,18 @@ graphify runs in three passes. First, a deterministic AST pass extracts structur
 
 Every relationship is tagged `EXTRACTED` (found directly in source), `INFERRED` (reasonable inference, with a confidence score), or `AMBIGUOUS` (flagged for review). You always know what was found vs guessed.
 
-## Install
+<!-- Quickstart callout for new developers -->
+<div style="border:2px solid #2ecc71;padding:12px;border-radius:8px;background:#f6fffa;margin-bottom:16px">
+<strong>🚀 Quickstart (for New Developers & Students)</strong>
+<ul>
+  <li>Install graphify (recommended): <code>uv tool install graphifyy &amp;&amp; graphify install</code></li>
+  <li>Build the project graph from your repo root: <code>/graphify .</code></li>
+  <li>Open <code>graphify-out/GRAPH_REPORT.md</code> for a 2-minute overview or <code>graphify-out/graph.html</code> to explore visually.</li>
+  <li>Read the full step-by-step guide below: <a href="#getting-started">Getting Started for New Developers &amp; Students</a>.</li>
+</ul>
+</div>
 
-**Requires:** Python 3.10+ and one of: [Claude Code](https://claude.ai/code), [Codex](https://openai.com/codex), [OpenCode](https://opencode.ai), [Cursor](https://cursor.com), [Gemini CLI](https://github.com/google-gemini/gemini-cli), [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli), [VS Code Copilot Chat](https://code.visualstudio.com/docs/copilot/overview), [Aider](https://aider.chat), [OpenClaw](https://openclaw.ai), [Factory Droid](https://factory.ai), [Trae](https://trae.ai), [Kiro](https://kiro.dev), Hermes, or [Google Antigravity](https://antigravity.google)
+<a id="getting-started"></a>
 
 ## Getting Started for New Developers & Students
 
