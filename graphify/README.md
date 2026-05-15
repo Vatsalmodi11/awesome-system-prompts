@@ -22,6 +22,8 @@
   </a>
 </p>
 
+<p align="center" style="margin-top:8px;font-weight:600">Quick links: <a href="#getting-started">Getting Started</a> · <a href="#usage">Usage</a> · <a href="#what-you-get">What you get</a></p>
+
 **An AI coding assistant skill.** Type `/graphify` in Claude Code, Codex, OpenCode, Cursor, Gemini CLI, GitHub Copilot CLI, VS Code Copilot Chat, Aider, OpenClaw, Factory Droid, Trae, Hermes, Kiro, or Google Antigravity - it reads your files, builds a knowledge graph, and gives you back structure you didn't know was there. Understand a codebase faster. Find the "why" behind architectural decisions.
 
 Fully multimodal. Drop in code, PDFs, markdown, screenshots, diagrams, whiteboard photos, images in other languages, or video and audio files - graphify extracts concepts and relationships from all of it and connects them into one graph. Videos are transcribed with Whisper using a domain-aware prompt derived from your corpus. YAML/YML files (Kubernetes, Kustomize, Helm, config) are indexed for semantic extraction. SQL files are AST-extracted deterministically — tables, views, functions, foreign keys, and FROM/JOIN relationships map directly into the graph with no LLM needed. 25 languages supported via tree-sitter AST (Python, JS, TS, Go, Rust, Java, C, C++, Ruby, C#, Kotlin, Scala, PHP, Swift, Lua, Zig, PowerShell, Elixir, Objective-C, Julia, Verilog, SystemVerilog, Vue, Svelte, Dart).
@@ -60,16 +62,39 @@ graphify runs in three passes. First, a deterministic AST pass extracts structur
 
 Every relationship is tagged `EXTRACTED` (found directly in source), `INFERRED` (reasonable inference, with a confidence score), or `AMBIGUOUS` (flagged for review). You always know what was found vs guessed.
 
-<!-- Quickstart callout for new developers -->
-<div style="border:2px solid #2ecc71;padding:12px;border-radius:8px;background:#f6fffa;margin-bottom:16px">
-<strong>🚀 Quickstart (for New Developers & Students)</strong>
-<ul>
-  <li>Install graphify (recommended): <code>uv tool install graphifyy &amp;&amp; graphify install</code></li>
-  <li>Build the project graph from your repo root: <code>/graphify .</code></li>
-  <li>Open <code>graphify-out/GRAPH_REPORT.md</code> for a 2-minute overview or <code>graphify-out/graph.html</code> to explore visually.</li>
-  <li>Read the full step-by-step guide below: <a href="#getting-started">Getting Started for New Developers &amp; Students</a>.</li>
-</ul>
-</div>
+<!-- Enhanced hero banner: stronger contrast, larger type, and inline SVG graph icon -->
+<section style="background:linear-gradient(90deg,#021827,#06283a);border-radius:14px;padding:28px;margin-bottom:20px;color:#ffffff">
+  <div style="max-width:980px;margin:0 auto;display:flex;gap:24px;align-items:center;flex-wrap:wrap;">
+    <div style="flex:1;min-width:320px;display:flex;gap:16px;align-items:center;">
+      <div style="flex:0 0 72px;height:72px;background:rgba(255,255,255,0.06);border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(2,24,40,0.45)">
+        <!-- Inline professional graph/network icon (white) -->
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <circle cx="4.5" cy="7.5" r="1.6" stroke="#ffffff" stroke-width="1.4" fill="rgba(255,255,255,0.04)"/>
+          <circle cx="12" cy="4.5" r="1.6" stroke="#ffffff" stroke-width="1.4" fill="rgba(255,255,255,0.04)"/>
+          <circle cx="19.5" cy="7.5" r="1.6" stroke="#ffffff" stroke-width="1.4" fill="rgba(255,255,255,0.04)"/>
+          <circle cx="7.5" cy="16.5" r="1.6" stroke="#ffffff" stroke-width="1.4" fill="rgba(255,255,255,0.04)"/>
+          <circle cx="16.5" cy="16.5" r="1.6" stroke="#ffffff" stroke-width="1.4" fill="rgba(255,255,255,0.04)"/>
+          <path d="M5.6 8.8L9.2 15.1" stroke="#9ec5ff" stroke-width="1.1" stroke-linecap="round"/>
+          <path d="M14.8 15.1L18.4 8.8" stroke="#9ec5ff" stroke-width="1.1" stroke-linecap="round"/>
+          <path d="M12 5.9L16 15" stroke="#9ec5ff" stroke-width="1.1" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <h1 style="margin:0;color:#ffffff;font-size:1.7rem;line-height:1.08;">🚀 Quickstart — New Developers &amp; Students</h1>
+        <p style="margin:8px 0 12px;color:#a9d0ff;font-weight:600">Install, build, and explore your project's knowledge graph in minutes.</p>
+        <pre style="background:#07101a;padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);color:#e6f0ff;display:inline-block;box-shadow:inset 0 1px 0 rgba(255,255,255,0.02);"><code>uv tool install graphifyy && graphify install
+cd /path/to/your/project
+/graphify .</code></pre>
+        <div style="margin-top:14px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+          <a href="#getting-started" style="background:linear-gradient(90deg,#2b83ff,#0066d6);color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700;box-shadow:0 8px 26px rgba(11,99,255,0.20);border:1px solid rgba(255,255,255,0.04)">Read Full Guide</a>
+        </div>
+        <p style="margin-top:12px;color:#b9d6ff;font-size:0.95rem">Tip: Commit <code style="color:#cfe6ff">graphify-out/</code> to share project memory with your team.</p>
+      </div>
+    </div>
+    <div style="width:220px;display:flex;justify-content:center;align-items:center;flex-direction:column">
+    </div>
+  </div>
+</section>
 
 <a id="getting-started"></a>
 
