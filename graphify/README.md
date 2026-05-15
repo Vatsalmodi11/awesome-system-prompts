@@ -77,27 +77,6 @@ pip install graphifyy && graphify install
 
 > **`graphify: command not found`?** Use `uv tool install graphifyy` (recommended) or `pipx install graphifyy` — both put the CLI in a managed location that's automatically on PATH. With plain `pip`, you may need to add `~/.local/bin` (Linux) or `~/Library/Python/3.x/bin` (Mac) to your PATH, or run `python -m graphify` instead. On Windows, pip scripts land in `%APPDATA%\Python\PythonXY\Scripts`.
 
-### Platform support
-
-| Platform | Install command |
-|----------|----------------|
-| Claude Code (Linux/Mac) | `graphify install` |
-| Claude Code (Windows) | `graphify install` (auto-detected) or `graphify install --platform windows` |
-| Codex | `graphify install --platform codex` |
-| OpenCode | `graphify install --platform opencode` |
-| GitHub Copilot CLI | `graphify install --platform copilot` |
-| VS Code Copilot Chat | `graphify vscode install` |
-| Aider | `graphify install --platform aider` |
-| OpenClaw | `graphify install --platform claw` |
-| Factory Droid | `graphify install --platform droid` |
-| Trae | `graphify install --platform trae` |
-| Trae CN | `graphify install --platform trae-cn` |
-| Gemini CLI | `graphify install --platform gemini` |
-| Hermes | `graphify install --platform hermes` |
-| Kiro IDE/CLI | `graphify kiro install` |
-| Cursor | `graphify cursor install` |
-| Google Antigravity | `graphify antigravity install` |
-
 ## Getting Started for New Developers & Students
 
 **New to this project?** Follow this step-by-step guide to understand and use graphify.
