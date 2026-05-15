@@ -97,6 +97,181 @@ pip install graphifyy && graphify install
 | Cursor | `graphify cursor install` |
 | Google Antigravity | `graphify antigravity install` |
 
+## Getting Started for New Developers & Students
+
+**New to this project?** Follow this step-by-step guide to understand and use graphify.
+
+### Who Should Use graphify?
+
+- **Students** learning a new codebase (yours or an open-source project)
+- **New team members** joining a project and need to understand its structure
+- **Developers** working across multiple files and want to see architectural connections
+- **Anyone** trying to understand "why" decisions were made, not just "what" the code does
+
+### Step 1: Understand What graphify Does
+
+graphify is a **knowledge graph builder**. It:
+- Reads all your project files (code, docs, images, videos, PDFs, screenshots)
+- Extracts relationships and concepts from them
+- Builds a **persistent memory layer** that your AI assistant can reference
+- Creates an **interactive graph** you can explore in your browser
+- Generates a **plain-English report** of the most important connections
+
+**Think of it as:** Building a visual map of your entire project that shows what connects to what, and why.
+
+### Step 2: Install graphify (Choose One)
+
+Pick the installation method that works best for you:
+
+**Easiest (Recommended):**
+```bash
+uv tool install graphifyy && graphify install
+```
+
+**Alternative with pipx:**
+```bash
+pipx install graphifyy && graphify install
+```
+
+**With plain pip (may require PATH setup):**
+```bash
+pip install graphifyy && graphify install
+```
+
+### Step 3: Build Your First Knowledge Graph
+
+Navigate to your project folder and run:
+
+```bash
+cd /path/to/your/project
+/graphify .
+```
+
+This command:
+- Scans all files in the current folder
+- Extracts code structure (functions, classes, imports) using AST analysis — **no AI calls needed yet**
+- Processes images, docs, and PDFs with AI to find concepts and relationships
+- Generates output in a new `graphify-out/` folder
+
+### Step 4: Explore Your Knowledge Graph
+
+After graphify finishes, you'll have three outputs:
+
+#### A. **Interactive Graph** (`graphify-out/graph.html`)
+- Open in any browser
+- Click nodes to explore connections
+- Search and filter by topics
+- See how everything relates
+
+#### B. **Quick Report** (`graphify-out/GRAPH_REPORT.md`)
+- **God nodes:** The most important concepts (what everything connects through)
+- **Surprising connections:** Links you didn't expect
+- **Suggested questions:** Questions the graph can answer
+- Start here for a 2-minute overview
+
+#### C. **Queryable Data** (`graphify-out/graph.json`)
+- The full knowledge graph in JSON format
+- Persistent across sessions
+- Can be queried weeks later without re-reading files
+- Used by AI assistants for faster, more accurate answers
+
+### Step 5: Build Project Memory (Context for Your AI Assistant)
+
+Once the graph exists, set up your AI assistant to use it automatically:
+
+**For VS Code Copilot Chat:**
+```bash
+graphify vscode install
+```
+
+**For Claude Code:**
+```bash
+graphify claude install
+```
+
+**For Other Platforms** (Cursor, Codex, Gemini CLI, GitHub Copilot CLI, etc.):
+```bash
+graphify install --platform {platform-name}
+```
+
+**What this does:** Creates a `.github/copilot-instructions.md` (or equivalent) that tells your AI assistant to read `GRAPH_REPORT.md` before searching through raw files. This is your project's **persistent memory layer**.
+
+### Step 6: Use graphify with Your AI Assistant
+
+Now when you ask your AI assistant questions, it will:
+1. **First** read the graph report (the map of your project)
+2. **Then** answer your question with architectural context, not just code matches
+
+**Examples:**
+```
+/graphify query "what connects the auth system to the database?"
+/graphify path "UserController" "DatabaseConnection"
+/graphify explain "ModelFactory"
+```
+
+Or use the always-on context — your assistant will reference the graph automatically without you needing to type `/graphify` each time.
+
+### Step 7: Keep Your Graph Updated
+
+When you add or change files:
+
+**Quick update (code changes only — instant, no AI calls):**
+```bash
+graphify update ./src
+```
+
+**Full re-extraction (documents, images changed):**
+```bash
+/graphify . --update
+```
+
+**Auto-sync in background (watch mode):**
+```bash
+graphify watch ./src
+```
+
+**Git hook (auto-rebuild after commits):**
+```bash
+graphify hook install
+```
+
+### What Knowledge Graph Memory Means for Your Project
+
+**Without graphify:** Every time you ask your AI assistant a question, it has to re-read all your files. That's slow and expensive (tokens).
+
+**With graphify:** 
+- First run: AI reads everything once and builds a knowledge graph (~71.5x compression on large projects)
+- Every subsequent query: AI uses the compact graph instead of raw files
+- Result: **71.5x fewer tokens per question**, persistent context across sessions, honest about what it found vs guessed
+
+**For teams:** Commit `graphify-out/` to git so everyone gets the same project memory. New team members instantly have architectural context.
+
+### Common Questions
+
+**Q: Do my files leave my computer?**
+- Code files: No. graphify uses tree-sitter AST locally on your machine.
+- Docs/images/videos: Only sent to your AI platform's API (same as if you copied and pasted manually).
+- Audio: Transcribed locally with faster-whisper. Never leaves your machine.
+
+**Q: How long does the first run take?**
+- Small projects (< 20 files): 30 seconds to 2 minutes
+- Medium projects (20-100 files): 2-10 minutes
+- Large projects (100+ files): 10-30 minutes
+
+**Q: Can I exclude files?**
+- Create `.graphifyignore` in your project root (same syntax as `.gitignore`):
+```
+node_modules/
+dist/
+*.generated.py
+docs/translations/
+```
+
+**Q: What if I just want to understand one folder?**
+```bash
+/graphify ./src/auth    # run on just the auth folder
+```
+
 Codex users also need `multi_agent = true` under `[features]` in `~/.codex/config.toml` for parallel extraction. Factory Droid uses the `Task` tool for parallel subagent dispatch. OpenClaw and Aider use sequential extraction (parallel agent support is still early on those platforms). Trae uses the Agent tool for parallel subagent dispatch and does **not** support PreToolUse hooks — AGENTS.md is the always-on mechanism. Codex supports PreToolUse hooks — `graphify codex install` installs one in `.codex/hooks.json` in addition to writing AGENTS.md.
 
 Then open your AI coding assistant and type:
