@@ -64,19 +64,6 @@ Every relationship is tagged `EXTRACTED` (found directly in source), `INFERRED` 
 
 **Requires:** Python 3.10+ and one of: [Claude Code](https://claude.ai/code), [Codex](https://openai.com/codex), [OpenCode](https://opencode.ai), [Cursor](https://cursor.com), [Gemini CLI](https://github.com/google-gemini/gemini-cli), [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli), [VS Code Copilot Chat](https://code.visualstudio.com/docs/copilot/overview), [Aider](https://aider.chat), [OpenClaw](https://openclaw.ai), [Factory Droid](https://factory.ai), [Trae](https://trae.ai), [Kiro](https://kiro.dev), Hermes, or [Google Antigravity](https://antigravity.google)
 
-```bash
-# Recommended — works on Mac and Linux with no PATH setup needed
-uv tool install graphifyy && graphify install
-# or with pipx
-pipx install graphifyy && graphify install
-# or plain pip
-pip install graphifyy && graphify install
-```
-
-> **Official package:** The PyPI package is named `graphifyy` (install with `pip install graphifyy`). Other packages named `graphify*` on PyPI are not affiliated with this project. The only official repository is [Vatsalmodi11/graphify](https://github.com/Vatsalmodi11/graphify). The CLI and skill command are still `graphify`.
-
-> **`graphify: command not found`?** Use `uv tool install graphifyy` (recommended) or `pipx install graphifyy` — both put the CLI in a managed location that's automatically on PATH. With plain `pip`, you may need to add `~/.local/bin` (Linux) or `~/Library/Python/3.x/bin` (Mac) to your PATH, or run `python -m graphify` instead. On Windows, pip scripts land in `%APPDATA%\Python\PythonXY\Scripts`.
-
 ## Getting Started for New Developers & Students
 
 **New to this project?** Follow this step-by-step guide to understand and use graphify.
