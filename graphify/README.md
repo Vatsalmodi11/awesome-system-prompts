@@ -80,7 +80,7 @@ Every relationship is tagged `EXTRACTED` (found directly in source), `INFERRED` 
         </svg>
       </div>
       <div>
-        <h1 style="margin:0;color:#ffffff;font-size:1.7rem;line-height:1.08;">🚀 Quickstart — New Developers &amp; Students</h1>
+        <h1 style="margin:0;color:#ffffff;font-size:1.7rem;line-height:1.08;">🚀 Quickstart — New Developers &amp; Students------</h1>
         <p style="margin:8px 0 12px;color:#a9d0ff;font-weight:600">Install, build, and explore your project's knowledge graph in minutes.</p>
         <pre style="background:#07101a;padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);color:#e6f0ff;display:inline-block;box-shadow:inset 0 1px 0 rgba(255,255,255,0.02);"><code>uv tool install graphifyy && graphify install
 cd /path/to/your/project
